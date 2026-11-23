@@ -1,491 +1,501 @@
-:root {
+/* ==================================================
+   VARIABLES
+   ================================================== */
 
+:root {
     --primary: #5b7d69;
     --secondary: #f6f1eb;
     --dark: #2f3a33;
+    --light: #f8f9fa;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ==================================================
+   RESET
+   ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Segoe UI,sans-serif;
-    color:#333;
-    line-height:1.6;
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+/* ==================================================
+   STRUCTURE GÉNÉRALE
+   ================================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-header{
-    position:sticky;
-    top:0;
-    background:white;
-    box-shadow:0 2px 15px rgba(0,0,0,0.1);
-    z-index:100;
+section {
+    padding: 90px 0;
 }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
+/* ==================================================
+   HEADER
+   ================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 
-nav a{
-    text-decoration:none;
-    color:#333;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.hero{
-    min-height:90vh;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* ==================================================
+   HERO
+   ================================================== */
+
+.hero {
+    min-height: 90vh;
 
     background:
-    linear-gradient(
-    rgba(0,0,0,.4),
-    rgba(0,0,0,.4)
-    ),
-    url("/assets/images/pexels-paulseling-20390772.jpg");
+        linear-gradient(
+            rgba(0, 0, 0, .45),
+            rgba(0, 0, 0, .45)
+        ),
+        url("/assets/images/pexels-paulseling-20390772.jpg");
 
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    text-align:center;
+    text-align: center;
 
-    color:white;
+    color: white;
 }
 
-.hero-content{
-    width:800px;
-    max-width:90%;
+.hero-content {
+    width: 800px;
+    max-width: 90%;
 }
 
-.hero h1{
-    font-size:4rem;
-    margin:20px 0;
+.hero h1 {
+    font-size: 4rem;
+    margin: 20px 0;
 }
 
-.hero p{
-    font-size:1.2rem;
+.hero p {
+    font-size: 1.2rem;
 }
 
-.badge{
-    display:inline-block;
-    background:rgba(255,255,255,.2);
-    padding:10px 16px;
-    border-radius:50px;
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, .2);
+    padding: 10px 16px;
+    border-radius: 50px;
 }
 
-.hero-buttons{
-    margin-top:40px;
+/* ==================================================
+   BOUTONS
+   ================================================== */
+
+.hero-buttons {
+    margin-top: 40px;
 }
 
 .btn-primary,
-.btn-secondary{
+.btn-secondary {
 
-    padding:15px 30px;
-    text-decoration:none;
-    border-radius:8px;
-    margin:10px;
-    display:inline-block;
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    margin: 10px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
 }
 
-.btn-primary{
-    background:var(--primary);
-    color:white;
+.btn-primary {
+    background: var(--primary);
+    color: white;
 }
 
-.btn-secondary{
-    background:white;
-    color:#333;
+.btn-primary:hover {
+    opacity: .9;
+    transform: translateY(-2px);
 }
 
-.confidence-bar{
-    background:var(--primary);
-    color:white;
+.btn-secondary {
+    background: white;
+    color: #333;
 }
 
-.confidence-bar .container{
-    display:flex;
-    justify-content:space-around;
-    padding:25px 0;
+/* ==================================================
+   BARRE DE CONFIANCE
+   ================================================== */
+
+.confidence-bar {
+    background: var(--primary);
+    color: white;
 }
 
-section{
-    padding:90px 0;
+.confidence-bar .container {
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 25px 0;
+
+    text-align: center;
 }
 
-h2{
-    text-align:center;
-    margin-bottom:50px;
-}
+/* ==================================================
+   CARTES
+   ================================================== */
 
-.card-grid{
-    display:grid;
+.card-grid {
+
+    display: grid;
+
     grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
+        repeat(auto-fit, minmax(280px, 1fr));
 
-    gap:30px;
+    gap: 30px;
 }
 
-.card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
+.card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
+        0 10px 30px rgba(0, 0, 0, .08);
 }
 
-.about{
-    background:var(--secondary);
+/* ==================================================
+   A PROPOS
+   ================================================== */
+
+.about {
+    background: var(--secondary);
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
 }
 
-.about img{
-    width:50%;
-    border-radius:30px;
+.about img {
+
+    width: 100%;
+
+    border-radius: 20px;
+
+    display: block;
 }
 
-.step-number{
-    display:inline-flex;
+/* ==================================================
+   ETAPES
+   ================================================== */
 
-    width:50px;
-    height:50px;
+.step-number {
 
-    justify-content:center;
-    align-items:center;
+    display: inline-flex;
 
-    border-radius:50%;
-    background:var(--primary);
+    justify-content: center;
+    align-items: center;
 
-    color:white;
-    font-weight:bold;
+    width: 50px;
+    height: 50px;
 
-    margin-bottom:20px;
+    border-radius: 50%;
+
+    background: var(--primary);
+    color: white;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
 }
 
-.contact{
-    background:#f8f9fa;
+/* ==================================================
+   FORMULAIRE
+   ================================================== */
+
+.contact {
+    background: var(--light);
 }
 
-form{
-    max-width:700px;
-    margin:auto;
+form {
+    max-width: 700px;
+    margin: auto;
 }
 
 input,
-textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border:1px solid #ddd;
-    border-radius:8px;
+textarea {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-family: inherit;
 }
 
-button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:8px;
-    background:var(--primary);
-    color:white;
-    cursor:pointer;
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .2s ease;
 }
 
-/* disparition du champ anti spam */
+button:hover {
+    opacity: .9;
+}
+
+/* Cache le champ anti-spam Netlify */
+
 .hidden {
     display: none;
 }
 
+/* ==================================================
+   FOOTER
+   ================================================== */
 
-footer{
-    text-align:center;
-    padding:30px;
-    background:#222;
-    color:white;
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: #222;
+
+    color: white;
 }
 
-@media(max-width:768px){
+/* ==================================================
+   PAGE MERCI
+   ================================================== */
 
-    .hero h1{
-        font-size:2.5rem;
-    }
+.thankyou-page {
 
-    .about-grid{
-        grid-template-columns:1fr;
-    }
+    min-height: 100vh;
 
-    .confidence-bar .container{
-        flex-direction:column;
-        gap:15px;
-        text-align:center;
-    }
-:root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    --primary: #5b7d69;
-    --secondary: #f6f1eb;
-    --dark: #2f3a33;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Segoe UI,sans-serif;
-    color:#333;
-    line-height:1.6;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-header{
-    position:sticky;
-    top:0;
-    background:white;
-    box-shadow:0 2px 15px rgba(0,0,0,0.1);
-    z-index:100;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#333;
-}
-
-.hero{
-    min-height:90vh;
+    padding: 30px;
 
     background:
-    linear-gradient(
-    rgba(0,0,0,.4),
-    rgba(0,0,0,.4)
-    ),
-    url("/assets/images/pexels-paulseling-20390772.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    color:white;
+        linear-gradient(
+            135deg,
+            #edf7f5,
+            #f6f1eb
+        );
 }
 
-.hero-content{
-    width:800px;
-    max-width:90%;
-}
+.thankyou-wrapper {
 
-.hero h1{
-    font-size:4rem;
-    margin:20px 0;
-}
+    width: 100%;
+    max-width: 700px;
 
-.hero p{
-    font-size:1.2rem;
-}
+    background: white;
 
-.badge{
-    display:inline-block;
-    background:rgba(255,255,255,.2);
-    padding:10px 16px;
-    border-radius:50px;
-}
+    text-align: center;
 
-.hero-buttons{
-    margin-top:40px;
-}
+    padding: 60px;
 
-.btn-primary,
-.btn-secondary{
-
-    padding:15px 30px;
-    text-decoration:none;
-    border-radius:8px;
-    margin:10px;
-    display:inline-block;
-}
-
-.btn-primary{
-    background:var(--primary);
-    color:white;
-}
-
-.btn-secondary{
-    background:white;
-    color:#333;
-}
-
-.confidence-bar{
-    background:var(--primary);
-    color:white;
-}
-
-.confidence-bar .container{
-    display:flex;
-    justify-content:space-around;
-    padding:25px 0;
-}
-
-section{
-    padding:90px 0;
-}
-
-h2{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.card-grid{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
+    border-radius: 25px;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
+        0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
-.about{
-    background:var(--secondary);
+.success-icon {
+
+    width: 140px;
+    height: 140px;
+
+    margin: 0 auto 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    background: var(--primary);
+
+    border-radius: 50%;
+
+    font-size: 70px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 0 15px rgba(91, 125, 105, 0.15),
+        0 15px 30px rgba(91, 125, 105, 0.30);
+
+    animation: pop .6s ease-out;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+.thankyou-wrapper h1 {
+
+    color: var(--dark);
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
 }
 
-.about img{
-    width:50%;
-    border-radius:30px;
+.intro {
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    color: var(--primary);
+
+    margin-bottom: 20px;
 }
 
-.step-number{
-    display:inline-flex;
+.thankyou-wrapper p {
 
-    width:50px;
-    height:50px;
+    max-width: 500px;
 
-    justify-content:center;
-    align-items:center;
+    margin: 0 auto 15px;
 
-    border-radius:50%;
-    background:var(--primary);
+    color: #666;
 
-    color:white;
-    font-weight:bold;
-
-    margin-bottom:20px;
+    text-align: center;
 }
 
-.contact{
-    background:#f8f9fa;
+.thankyou-wrapper .btn-primary {
+
+    margin-top: 25px;
 }
 
-form{
-    max-width:700px;
-    margin:auto;
-}
+/* ==================================================
+   ANIMATION
+   ================================================== */
 
-input,
-textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border:1px solid #ddd;
-    border-radius:8px;
-}
+@keyframes pop {
 
-button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:8px;
-    background:var(--primary);
-    color:white;
-    cursor:pointer;
-}
-
-/* disparition du champ anti spam */
-.hidden {
-    display: none;
-}
-
-
-footer{
-    text-align:center;
-    padding:30px;
-    background:#222;
-    color:white;
-}
-
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:2.5rem;
+    0% {
+        transform: scale(0);
+        opacity: 0;
     }
 
-    .about-grid{
-        grid-template-columns:1fr;
+    70% {
+        transform: scale(1.15);
     }
 
-    .confidence-bar .container{
-        flex-direction:column;
-        gap:15px;
-        text-align:center;
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confidence-bar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .thankyou-wrapper {
+        padding: 40px 25px;
+    }
+
+    .thankyou-wrapper h1 {
+        font-size: 2rem;
+    }
+
+    .success-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
     }
 }
