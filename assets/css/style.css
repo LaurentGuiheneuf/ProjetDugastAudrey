@@ -1,0 +1,246 @@
+:root {
+
+    --primary: #5b7d69;
+    --secondary: #f6f1eb;
+    --dark: #2f3a33;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI,sans-serif;
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    position:sticky;
+    top:0;
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,0.1);
+    z-index:100;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+}
+
+.hero{
+    min-height:90vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.4),
+    rgba(0,0,0,.4)
+    ),
+    url("/assets/images/pexels-paulseling-20390772.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content{
+    width:800px;
+    max-width:90%;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin:20px 0;
+}
+
+.hero p{
+    font-size:1.2rem;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.2);
+    padding:10px 16px;
+    border-radius:50px;
+}
+
+.hero-buttons{
+    margin-top:40px;
+}
+
+.btn-primary,
+.btn-secondary{
+
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:8px;
+    margin:10px;
+    display:inline-block;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:white;
+}
+
+.btn-secondary{
+    background:white;
+    color:#333;
+}
+
+.confidence-bar{
+    background:var(--primary);
+    color:white;
+}
+
+.confidence-bar .container{
+    display:flex;
+    justify-content:space-around;
+    padding:25px 0;
+}
+
+section{
+    padding:90px 0;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+.about{
+    background:var(--secondary);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:50%;
+    border-radius:30px;
+}
+
+.step-number{
+    display:inline-flex;
+
+    width:50px;
+    height:50px;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+    background:var(--primary);
+
+    color:white;
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+.contact{
+    background:#f8f9fa;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:var(--primary);
+    color:white;
+    cursor:pointer;
+}
+
+/* disparition du champ anti spam */
+.hidden {
+    display: none;
+}
+
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#222;
+    color:white;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .confidence-bar .container{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+}
